@@ -27,7 +27,6 @@ module.exports = function updateUserProfile () {
           void user.update({ username: req.body.username }).then((savedUser: UserModel) => {
             // @ts-expect-error FIXME some properties missing in savedUser
             savedUser = utils.queryResultToJson(savedUser)
-            const updatedToken = security.authorize(savedUser)
             security.authenticatedUsers.put(updatedToken, savedUser)
             res.cookie('token', updatedToken)
             res.location(process.env.BASE_PATH + '/profile')
