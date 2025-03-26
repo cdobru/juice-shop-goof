@@ -251,7 +251,7 @@
     "mocha": "^8.1.1",
     "node-fetch": "^2.6.13",
     "nyc": "^15.1.2",
-    "shelljs": "^0.8.4",
+    "shelljs": "^0.8.5",
     "sinon-chai": "^3.7.0",
     "socket.io-client": "^3.1.0",
     "source-map-support": "^0.5.19",
