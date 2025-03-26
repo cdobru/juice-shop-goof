@@ -28,7 +28,6 @@ module.exports = function updateUserProfile () {
             // @ts-expect-error FIXME some properties missing in savedUser
             savedUser = utils.queryResultToJson(savedUser)
             security.authenticatedUsers.put(updatedToken, savedUser)
-            res.cookie('token', updatedToken)
             res.location(process.env.BASE_PATH + '/profile')
             res.redirect(process.env.BASE_PATH + '/profile')
           })
