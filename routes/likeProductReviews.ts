@@ -51,7 +51,6 @@ module.exports = function productReviews () {
                 })
               }, 150)
             }, (err: unknown) => {
-              res.status(500).json(err)
             })
         } else {
           res.status(403).json({ error: 'Not allowed' })
