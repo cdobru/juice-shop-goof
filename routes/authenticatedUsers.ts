@@ -6,7 +6,6 @@ import { type Request, type Response, type NextFunction } from 'express'
 import { UserModel } from '../models/user'
 
 import * as utils from '../lib/utils'
-const security = require('../lib/insecurity')
 
 module.exports = function retrieveUserList () {
     UserModel.findAll().then((users: UserModel[]) => {
